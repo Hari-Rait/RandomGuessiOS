@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CC70F8ED2AE9AA280004215E /* RandomGuessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F8EC2AE9AA280004215E /* RandomGuessApp.swift */; };
-		CC70F8EF2AE9AA280004215E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F8EE2AE9AA280004215E /* Persistence.swift */; };
 		CC70F8F22AE9AA280004215E /* RandomGuess.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC70F8F02AE9AA280004215E /* RandomGuess.xcdatamodeld */; };
-		CC70F8F42AE9AA280004215E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F8F32AE9AA280004215E /* ContentView.swift */; };
 		CC70F8F62AE9AA290004215E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC70F8F52AE9AA290004215E /* Assets.xcassets */; };
 		CC70F8FA2AE9AA290004215E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC70F8F92AE9AA290004215E /* Preview Assets.xcassets */; };
 		CC70F9042AE9AA290004215E /* RandomGuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F9032AE9AA290004215E /* RandomGuessTests.swift */; };
 		CC70F90E2AE9AA290004215E /* RandomGuessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F90D2AE9AA290004215E /* RandomGuessUITests.swift */; };
 		CC70F9102AE9AA290004215E /* RandomGuessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F90F2AE9AA290004215E /* RandomGuessUITestsLaunchTests.swift */; };
+		CC70F91D2AE9AD940004215E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F91C2AE9AD940004215E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +37,7 @@
 /* Begin PBXFileReference section */
 		CC70F8E92AE9AA280004215E /* RandomGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC70F8EC2AE9AA280004215E /* RandomGuessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGuessApp.swift; sourceTree = "<group>"; };
-		CC70F8EE2AE9AA280004215E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CC70F8F12AE9AA280004215E /* RandomGuess.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RandomGuess.xcdatamodel; sourceTree = "<group>"; };
-		CC70F8F32AE9AA280004215E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC70F8F52AE9AA290004215E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC70F8F72AE9AA290004215E /* RandomGuess.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RandomGuess.entitlements; sourceTree = "<group>"; };
 		CC70F8F92AE9AA290004215E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		CC70F9092AE9AA290004215E /* RandomGuessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomGuessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC70F90D2AE9AA290004215E /* RandomGuessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGuessUITests.swift; sourceTree = "<group>"; };
 		CC70F90F2AE9AA290004215E /* RandomGuessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGuessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC70F91C2AE9AD940004215E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CC70F8EC2AE9AA280004215E /* RandomGuessApp.swift */,
-				CC70F8EE2AE9AA280004215E /* Persistence.swift */,
-				CC70F8F32AE9AA280004215E /* ContentView.swift */,
+				CC70F91C2AE9AD940004215E /* ContentView.swift */,
 				CC70F8F52AE9AA290004215E /* Assets.xcassets */,
 				CC70F8F72AE9AA290004215E /* RandomGuess.entitlements */,
 				CC70F8F02AE9AA280004215E /* RandomGuess.xcdatamodeld */,
@@ -267,8 +264,7 @@
 			files = (
 				CC70F8F22AE9AA280004215E /* RandomGuess.xcdatamodeld in Sources */,
 				CC70F8ED2AE9AA280004215E /* RandomGuessApp.swift in Sources */,
-				CC70F8F42AE9AA280004215E /* ContentView.swift in Sources */,
-				CC70F8EF2AE9AA280004215E /* Persistence.swift in Sources */,
+				CC70F91D2AE9AD940004215E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
