@@ -9,10 +9,20 @@ import SwiftUI
 
 @main
 struct RandomGuessApp: App {
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            TabView {
+                ContentView()
+                    .tabItem {
+                        Label("RandomGuess", systemImage: "wand.and.stars")
+                    }
+                Text("Wheel Spin")
+                    .tabItem {
+                        Label("Drehrad", systemImage: "soccerball")
+                    }
+            }
         }
     }
 }

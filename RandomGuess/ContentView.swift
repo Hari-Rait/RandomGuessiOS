@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var Guesses: String = ""
     @State private var RandomGuess: [String] = []
     @State private var random = ""
-    
+   
     
     var body: some View {
         
@@ -64,6 +64,7 @@ struct ContentView: View {
             Button ( action: {
                 if !RandomGuess.isEmpty {
                     RandomGuess.removeAll()
+                    random = ""
                 }
             }) {
                 Text("Alle Eingaben Löschen")
