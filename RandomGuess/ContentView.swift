@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var Guesses: String = ""
     @State private var RandomGuess: [String] = []
-    @State private var random = "Brücken Sie den Button"
+    @State private var random = "Drücken Sie den Button"
     
     
     var body: some View {
@@ -30,35 +30,41 @@ struct ContentView: View {
             }) {
                 Text("Hinzufügen")
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.mint)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
             
-            
-            List(RandomGuess, id: \.self) { item in
-                Text(item)
+            List{
+                ForEach(RandomGuess, id: \.self) { item in
+                    Text(item)
+                }
+                .onDelete(perform: removeRows)
             }
             .padding()
             Spacer()
             
             Button ( action: {
                 if !RandomGuess.isEmpty {
-                     random = RandomGuess.randomElement()!
+                    random = RandomGuess.randomElement()!
                 }
             }) {
                 Text("Zufall generieren")
                     .padding()
-                    .background(Color.red)
+                    .background(Color.purple)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
             Text(random)
             
-            }
-        .padding()
         }
+        .padding()
     }
+    
+    func removeRows(at offsets: IndexSet) {
+       RandomGuess.remove(atOffsets: offsets)
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
