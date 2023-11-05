@@ -1,5 +1,5 @@
 //
-//  SwiftUISpinnWheel.swift
+//  SwiftUISpinWheel.swift
 //  RandomGuess
 //
 //  Created by Hari Rait on 30.10.23.
@@ -93,87 +93,89 @@ public struct WheelView<Data, ID, Label>: View where Data: RandomAccessCollectio
         self.label = label
         self.action = action
     }
-
+    
     public var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Circle()
-                    .fill(Color.gray)
-                    .shadow(color: Color.black.opacity(0.3),
-                            radius: geometry.size.height / 15,
-                            x:0, y: 0)
-                ForEach(enumeratedData, id: enumeratedDataIDKeyPath) { (index, item) in
-                    let color = colors[index % colors.count]
-                    let includeOverlap = !(index == data.count - 1)
-                    WheelSlice(size: sliceSize, color: color, includeOverlap: includeOverlap) {
-                        if let label = label {
-                            label(index)
-                        } else {
-                            Text ("\(index + 1)")
-                                .font (.system(.title, design: .rounded))
-                                .fontWeight(.bold)
-                                .foregroundColor (.white)
+        
+        VStack{
+            GeometryReader { geometry in
+                ZStack {
+                    Circle()
+                        .fill(Color.gray)
+                        .shadow(color: Color.black.opacity(0.3),
+                                radius: geometry.size.height / 15,
+                                x:0, y: 0)
+                    ForEach(enumeratedData, id: enumeratedDataIDKeyPath) { (index, item) in
+                        let color = colors[index % colors.count]
+                        let includeOverlap = !(index == data.count - 1)
+                        WheelSlice(size: sliceSize, color: color, includeOverlap: includeOverlap) {
+                            if let label = label {
+                                label(index)
+                            } else {
+                                Text ("\(index + 1)")
+                                    .font (.system(.title, design: .rounded))
+                                    .fontWeight(.bold)
+                                    .foregroundColor (.white)
+                            }
                         }
+                        .rotationEffect(sliceSize * Double (index))
                     }
-                    .rotationEffect(sliceSize * Double (index))
+                    .rotationEffect(.degrees (startingRotation) + .degrees (translation / geometry.size.height * 180))
+                    
+                    WheelPointer()
+                        .fill(Color.white)
+                        .shadow(color: Color.black.opacity (0.3),
+                                radius: geometry.size.height / 50,
+                                x: 0, y: 0)
+                        .frame(width: geometry.size.width / 12, height: geometry.size.height / 6, alignment: .center)
                 }
-                .rotationEffect(.degrees (startingRotation) + .degrees (translation / geometry.size.height * 180))
-
-                WheelPointer()
-                    .fill(Color.white)
-                    .shadow(color: Color.black.opacity (0.3),
-                            radius: geometry.size.height / 50,
-                            x: 0, y: 0)
-                    .frame(width: geometry.size.width / 12, height: geometry.size.height / 6, alignment: .center)
-            }
-            .onChange(of: selectedIndex, perform: { value in
-                guard
-                    !isStartedSpinnig,
-                    value < data.count
-                else { return }
-
-                isStartedSpinnig = true
-
-                rotateWheel(
-                    predictedEndTranslationHeight: Double.random(in: 1500...2500),
-                    translationHeight: 0,
-                    height: geometry.size.height,
-                    selectedIndex: value)
-            })
-            .gesture(
-                DragGesture()
-                    .onChanged { value in
-                        guard !isStartedSpinnig else { return }
-
-                        startingRotation = startingRotation.truncatingRemainder(dividingBy: 360)
-                        translation = value.translation.height
-                    }
-                    .onEnded { value in
-                        guard !isStartedSpinnig else { return }
-
-                        isStartedSpinnig = true
-
-                        if let selectedIndex = manualSpining?() {
-                            rotateWheel(
-                                predictedEndTranslationHeight: Double.random(in: 1500...2500),
-                                translationHeight: value.translation.height,
-                                height: geometry.size.height,
-                                selectedIndex: selectedIndex
-                            )
-                            return
+                .onChange(of: selectedIndex, perform: { value in
+                    guard
+                        !isStartedSpinnig,
+                        value < data.count
+                    else { return }
+                    
+                    isStartedSpinnig = true
+                    
+                    rotateWheel(
+                        predictedEndTranslationHeight: Double.random(in: 1500...2500),
+                        translationHeight: 0,
+                        height: geometry.size.height,
+                        selectedIndex: value)
+                })
+                .gesture(
+                    DragGesture()
+                        .onChanged { value in
+                            guard !isStartedSpinnig else { return }
+                            
+                            startingRotation = startingRotation.truncatingRemainder(dividingBy: 360)
+                            translation = value.translation.height
                         }
-
-                        rotateWheel(
-                            predictedEndTranslationHeight: value.predictedEndTranslation.height,
-                            translationHeight: value.translation.height,
-                            height: geometry.size.height
-                        )
-                    }
+                        .onEnded { value in
+                            guard !isStartedSpinnig else { return }
+                            
+                            isStartedSpinnig = true
+                            
+                            if let selectedIndex = manualSpining?() {
+                                rotateWheel(
+                                    predictedEndTranslationHeight: Double.random(in: 1500...2500),
+                                    translationHeight: value.translation.height,
+                                    height: geometry.size.height,
+                                    selectedIndex: selectedIndex
+                                )
+                                return
+                            }
+                            
+                            rotateWheel(
+                                predictedEndTranslationHeight: value.predictedEndTranslation.height,
+                                translationHeight: value.translation.height,
+                                height: geometry.size.height
+                            )
+                        }
                 )
+            }
+            .aspectRatio(1, contentMode: .fit)
         }
-        .aspectRatio(1, contentMode: .fit)
     }
-
     // MARK: - Private Methods
 
     private func rotateWheel(
@@ -218,7 +220,7 @@ public struct WheelView<Data, ID, Label>: View where Data: RandomAccessCollectio
 
 @available(iOS 14.0, *)
 struct WheelView_Previews: PreviewProvider {
-    static let items: [String] = ["item1", "item2", "item3", "item4", "item5", "item6"]
+    static let items: [String] = ["H", "B"]
     static var previews: some View {
         WheelView(
             items,

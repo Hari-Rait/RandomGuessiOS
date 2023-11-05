@@ -7,12 +7,20 @@
 
 import SwiftUI
 
-struct WheelSliceShape: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+@available(iOS 14.0, *)
+struct WheelSliceShape: Shape {
+    let sliceSize: Angle
+    let includeOverlap: Bool
 
-#Preview {
-    WheelSliceShape()
+    func path(in rect: CGRect) -> Path {
+        Path { path in
+            path.move(to: CGPoint(x: rect.midX, y: rect.midY))
+            path.addArc(
+                center: CGPoint(x: rect.midX, y: rect.midY),
+                radius: rect.size.height / 2,
+                startAngle: .degrees(-90) - (sliceSize / 2),
+                endAngle: .degrees(-90) + (sliceSize / 2) + (includeOverlap ? sliceSize / 4 : .degrees(0)),
+                clockwise: false)
+        }
+    }
 }

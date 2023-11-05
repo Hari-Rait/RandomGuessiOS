@@ -18,11 +18,11 @@ struct RandomGuessApp: App {
                     .tabItem {
                         Label("RandomGuess", systemImage: "wand.and.stars")
                     }
-                Text("Wheel Spin")
-                    .tabItem {
-                        Label("Drehrad", systemImage: "soccerball")
-                    }
             }
         }
     }
 }
+
+
+
+    

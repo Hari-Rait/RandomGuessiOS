@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC049B7D2AEF1D16003080D8 /* SwiftUISpinWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC049B7C2AEF1D16003080D8 /* SwiftUISpinWheel.swift */; };
+		CC049B7F2AEF1D6C003080D8 /* WheelPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC049B7E2AEF1D6C003080D8 /* WheelPointer.swift */; };
+		CC049B812AEF1D91003080D8 /* WheelSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC049B802AEF1D91003080D8 /* WheelSlice.swift */; };
+		CC049B832AEF1DB2003080D8 /* WheelSliceShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC049B822AEF1DB2003080D8 /* WheelSliceShape.swift */; };
 		CC70F8ED2AE9AA280004215E /* RandomGuessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F8EC2AE9AA280004215E /* RandomGuessApp.swift */; };
 		CC70F8F22AE9AA280004215E /* RandomGuess.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC70F8F02AE9AA280004215E /* RandomGuess.xcdatamodeld */; };
 		CC70F8F62AE9AA290004215E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC70F8F52AE9AA290004215E /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC049B7C2AEF1D16003080D8 /* SwiftUISpinWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISpinWheel.swift; sourceTree = "<group>"; };
+		CC049B7E2AEF1D6C003080D8 /* WheelPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPointer.swift; sourceTree = "<group>"; };
+		CC049B802AEF1D91003080D8 /* WheelSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSlice.swift; sourceTree = "<group>"; };
+		CC049B822AEF1DB2003080D8 /* WheelSliceShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSliceShape.swift; sourceTree = "<group>"; };
 		CC70F8E92AE9AA280004215E /* RandomGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC70F8EC2AE9AA280004215E /* RandomGuessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGuessApp.swift; sourceTree = "<group>"; };
 		CC70F8F12AE9AA280004215E /* RandomGuess.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RandomGuess.xcdatamodel; sourceTree = "<group>"; };
@@ -74,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC049B842AEF1DBE003080D8 /* Wheel */ = {
+			isa = PBXGroup;
+			children = (
+				CC049B7C2AEF1D16003080D8 /* SwiftUISpinWheel.swift */,
+				CC049B7E2AEF1D6C003080D8 /* WheelPointer.swift */,
+				CC049B802AEF1D91003080D8 /* WheelSlice.swift */,
+				CC049B822AEF1DB2003080D8 /* WheelSliceShape.swift */,
+			);
+			path = Wheel;
+			sourceTree = "<group>";
+		};
 		CC70F8E02AE9AA270004215E = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +118,7 @@
 			children = (
 				CC70F8EC2AE9AA280004215E /* RandomGuessApp.swift */,
 				CC70F91C2AE9AD940004215E /* ContentView.swift */,
+				CC049B842AEF1DBE003080D8 /* Wheel */,
 				CC70F8F52AE9AA290004215E /* Assets.xcassets */,
 				CC70F8F72AE9AA290004215E /* RandomGuess.entitlements */,
 				CC70F8F02AE9AA280004215E /* RandomGuess.xcdatamodeld */,
@@ -263,8 +283,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC70F8F22AE9AA280004215E /* RandomGuess.xcdatamodeld in Sources */,
+				CC049B7F2AEF1D6C003080D8 /* WheelPointer.swift in Sources */,
+				CC049B812AEF1D91003080D8 /* WheelSlice.swift in Sources */,
 				CC70F8ED2AE9AA280004215E /* RandomGuessApp.swift in Sources */,
+				CC049B7D2AEF1D16003080D8 /* SwiftUISpinWheel.swift in Sources */,
 				CC70F91D2AE9AD940004215E /* ContentView.swift in Sources */,
+				CC049B832AEF1DB2003080D8 /* WheelSliceShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
