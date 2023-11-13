@@ -18,6 +18,10 @@ struct RandomGuessApp: App {
                     .tabItem {
                         Label("RandomGuess", systemImage: "wand.and.stars")
                     }
+                RandomGenerator()
+                    .tabItem{
+                        Label("RandomGuess Generator", systemImage: "heat.waves")
+                    }
             }
         }
     }

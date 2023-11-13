@@ -19,6 +19,7 @@
 		CC70F90E2AE9AA290004215E /* RandomGuessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F90D2AE9AA290004215E /* RandomGuessUITests.swift */; };
 		CC70F9102AE9AA290004215E /* RandomGuessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F90F2AE9AA290004215E /* RandomGuessUITestsLaunchTests.swift */; };
 		CC70F91D2AE9AD940004215E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70F91C2AE9AD940004215E /* ContentView.swift */; };
+		CC8AD2252AFB94A600102EFD /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8AD2242AFB94A600102EFD /* RandomGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CC70F90D2AE9AA290004215E /* RandomGuessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGuessUITests.swift; sourceTree = "<group>"; };
 		CC70F90F2AE9AA290004215E /* RandomGuessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGuessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC70F91C2AE9AD940004215E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC8AD2242AFB94A600102EFD /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				CC70F8EC2AE9AA280004215E /* RandomGuessApp.swift */,
 				CC70F91C2AE9AD940004215E /* ContentView.swift */,
+				CC8AD2242AFB94A600102EFD /* RandomGenerator.swift */,
 				CC049B842AEF1DBE003080D8 /* Wheel */,
 				CC70F8F52AE9AA290004215E /* Assets.xcassets */,
 				CC70F8F72AE9AA290004215E /* RandomGuess.entitlements */,
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8AD2252AFB94A600102EFD /* RandomGenerator.swift in Sources */,
 				CC70F8F22AE9AA280004215E /* RandomGuess.xcdatamodeld in Sources */,
 				CC049B7F2AEF1D6C003080D8 /* WheelPointer.swift in Sources */,
 				CC049B812AEF1D91003080D8 /* WheelSlice.swift in Sources */,

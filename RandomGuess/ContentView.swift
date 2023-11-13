@@ -20,8 +20,6 @@ struct ContentView: View {
     // nimmt sich ein zufälliges Element aus dem Array und speichert es in der Variable
     @State private var random = ""
     
-    // Spinning Wheel
-    let colors: [Color] = []
     
     // Hellblaue farbe
     let skyBlue = Color(red: 0.4627, green: 0.8392, blue: 1.0)
@@ -32,17 +30,31 @@ struct ContentView: View {
         NavigationView{
             
             VStack{
+                
+                Text("Bitte fügen Sie min. 2 Guesses ein")
+                    .foregroundStyle(Color.primary)
+                
                 HStack{
                     
                     Button("Ein Guess Hinzufügen") {
                         showingPopover = true
                     }
+                    .foregroundColor(.white)
                     .popover(isPresented: $showingPopover) {
+                        
                         VStack {
+                            
+                            Button("", systemImage: "chevron.compact.down") {
+                                showingPopover = false
+                            }
+                            .foregroundColor(.primary)
+                            .padding()
+                            .font(.largeTitle)
                             
                             Text("Für das Guessrad werden mind. 2 Namen benötigt")
                                 .font(.headline)
                                 .multilineTextAlignment(.center)
+                                .padding()
                             
                             
                             TextField("Gib bitte dein Guess ein", text: $Guesses)
@@ -75,49 +87,37 @@ struct ContentView: View {
                                 .onDelete(perform: removeRows)
                             }
                             .padding()
-                            Spacer()
+                            .scrollContentBackground(.hidden)
+                            .cornerRadius(15)
                         }
                     }
                     .padding()
                     .background(skyBlue)
                     .cornerRadius(10)
                     
+                }
+                
+                List {
                     
-                    
-                    Button ( action: {
-                        if !RandomGuess.isEmpty {
-                            random = RandomGuess.randomElement()!
+                    if RandomGuess.isEmpty {
+                        
+                        Text("Keine Eingaben vorhanden")
+                        
+                    }else {
+                        
+                        DisclosureGroup("Alle Eingaben") {
+                            ForEach(RandomGuess, id: \.self) { item in
+                                Text(item)
+                                
+                            }
+                            .onDelete(perform: removeRows)
                         }
-                    }) {
-                        Text("Zufall generieren")
-                            .padding()
-                            .background(Color.black)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                }
-                
-                Button ( action: {
-                    if !RandomGuess.isEmpty {
-                        RandomGuess.removeAll()
-                        random = ""
-                    }
-                }) {
-                    Text("Alle Eingaben Löschen")
                         .padding()
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                
-                List{
-                    ForEach(RandomGuess, id: \.self) { item in
-                        Text(item)
                     }
-                    .onDelete(perform: removeRows)
                 }
-                .padding()
-                Spacer()
+                .scrollContentBackground(.hidden)
+                .background(skyBlue)
+                .cornerRadius(15)
                 
                 if RandomGuess.count >= 2 {
                     
@@ -135,10 +135,15 @@ struct ContentView: View {
                         print(item)
                     }
                     .padding()
+                    
+                    Image("fingerspin")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 70, height: 70)
+                    
                 } else {
                     hidden()
                 }
-                
                 
                 Text(random)
                     .font(.largeTitle)
@@ -152,6 +157,10 @@ struct ContentView: View {
     
     func removeRows(at offsets: IndexSet) {
         RandomGuess.remove(atOffsets: offsets)
+    }
+    
+    func removeAllElements() {
+        RandomGuess.removeAll()
     }
 }
 

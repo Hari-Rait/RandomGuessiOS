@@ -100,7 +100,7 @@ public struct WheelView<Data, ID, Label>: View where Data: RandomAccessCollectio
             GeometryReader { geometry in
                 ZStack {
                     Circle()
-                        .fill(Color.gray)
+                        .fill(Color.mint)
                         .shadow(color: Color.black.opacity(0.3),
                                 radius: geometry.size.height / 15,
                                 x:0, y: 0)
