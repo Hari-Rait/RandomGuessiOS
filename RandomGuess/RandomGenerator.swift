@@ -106,7 +106,7 @@ struct RandomGenerator: View {
                         }
                     }
                     .scrollContentBackground(.hidden)
-                    .background(skyBlue)
+                    //.background(skyBlue)
                     .cornerRadius(15)
                 }
                 
@@ -118,13 +118,15 @@ struct RandomGenerator: View {
                 }) {
                     Text("Zufall generieren")
                         .padding()
-                        .background(Color.primary)
+                        .background(Color.black)
+                        .foregroundColor(.white)
                         .cornerRadius(10)
                 }
                 
-                Text(random)
-                    .font(.largeTitle)
-                
+                if !RandomGuess.isEmpty {
+                    Text(random)
+                        .font(.largeTitle)
+                }
             }
             .padding()
             .navigationTitle("RandomGuess Generator")
