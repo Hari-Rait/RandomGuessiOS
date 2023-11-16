@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/harirait/RandomGuessiOS/RandomGuess/build/Release-iphoneos/FortuneWheel/FortuneWheel.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/harirait/RandomGuessiOS/RandomGuess/build/Release-iphoneos/FortuneWheel/FortuneWheel.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "FortuneWheel-Swift.h",
+      'external-contents': "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/unextended-interface-header.h",
+    }]
+    }]
+}

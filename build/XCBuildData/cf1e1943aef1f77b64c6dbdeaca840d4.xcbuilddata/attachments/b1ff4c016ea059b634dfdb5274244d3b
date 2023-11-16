@@ -1,0 +1,6 @@
+framework module Pods_RandomGuess {
+  umbrella header "Pods-RandomGuess-umbrella.h"
+
+  export *
+  module * { export * }
+}

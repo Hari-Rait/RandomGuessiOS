@@ -1,0 +1,10 @@
+Target dependency graph (5 targets)
+Target 'Pods-RandomGuessTests' in project 'Pods'
+➜ Explicit dependency on target 'Pods-RandomGuess' in project 'Pods'
+Target 'Pods-RandomGuess-RandomGuessUITests' in project 'Pods'
+➜ Explicit dependency on target 'FortuneWheel' in project 'Pods'
+Target 'Pods-RandomGuess' in project 'Pods'
+➜ Explicit dependency on target 'FortuneWheel' in project 'Pods'
+Target 'FortuneWheel' in project 'Pods'
+➜ Explicit dependency on target 'FortuneWheel-FortuneWheel' in project 'Pods'
+Target 'FortuneWheel-FortuneWheel' in project 'Pods' (no dependencies)

@@ -1,0 +1,5 @@
+ extern const unsigned char Pods_RandomGuessTestsVersionString[];
+ extern const double Pods_RandomGuessTestsVersionNumber;
+
+ const unsigned char Pods_RandomGuessTestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_RandomGuessTests  PROJECT:Pods-1" "\n";
+ const double Pods_RandomGuessTestsVersionNumber __attribute__ ((used)) = (double)1.;

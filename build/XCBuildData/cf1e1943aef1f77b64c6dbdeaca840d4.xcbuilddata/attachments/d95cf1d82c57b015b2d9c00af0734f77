@@ -1,0 +1,5 @@
+ extern const unsigned char FortuneWheelVersionString[];
+ extern const double FortuneWheelVersionNumber;
+
+ const unsigned char FortuneWheelVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:FortuneWheel  PROJECT:Pods-1" "\n";
+ const double FortuneWheelVersionNumber __attribute__ ((used)) = (double)1.;

@@ -1,0 +1,30 @@
+{
+  "" : {
+    "const-values" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel-master.swiftconstvalues",
+    "dependencies" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel-master.d",
+    "diagnostics" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel-master.dia",
+    "emit-module-dependencies" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel-master-emit-module.dia",
+    "swift-dependencies" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel-master.swiftdeps"
+  },
+  "/Users/harirait/RandomGuessiOS/RandomGuess/Pods/FortuneWheel/Sources/FortuneWheel/FortuneWheel.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel.o",
+    "llvm-bc" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel.bc",
+    "object" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheel.o"
+  },
+  "/Users/harirait/RandomGuessiOS/RandomGuess/Pods/FortuneWheel/Sources/FortuneWheel/FortuneWheelViewModel.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheelViewModel.o",
+    "llvm-bc" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheelViewModel.bc",
+    "object" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/FortuneWheelViewModel.o"
+  },
+  "/Users/harirait/RandomGuessiOS/RandomGuess/Pods/FortuneWheel/Sources/FortuneWheel/SpinWheel/SpinWheelCell.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/SpinWheelCell.o",
+    "llvm-bc" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/SpinWheelCell.bc",
+    "object" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/SpinWheelCell.o"
+  },
+  "/Users/harirait/RandomGuessiOS/RandomGuess/Pods/FortuneWheel/Sources/FortuneWheel/SpinWheel/SpinWheelView.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/SpinWheelView.o",
+    "llvm-bc" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/SpinWheelView.bc",
+    "object" : "/Users/harirait/RandomGuessiOS/RandomGuess/build/Pods.build/Release-iphoneos/FortuneWheel.build/Objects-normal/arm64/SpinWheelView.o"
+  }
+}

@@ -142,6 +142,9 @@ struct ContentView: View {
                                 .scaledToFit()
                                 .frame(width: 70, height: 70)
                             
+                            Text("Wischen Sie, um das Rad zu drehen")
+                                .font(.caption.bold())
+                            
                         } else {
                             hidden()
                         }
