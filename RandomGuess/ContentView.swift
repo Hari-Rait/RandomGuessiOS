@@ -5,8 +5,6 @@
 //  Created by Hari Rait on 25.10.23.
 
 
-//#imageLiteral(resourceName: "PurpleBackground.jpg")
-
 import SwiftUI
 
 
@@ -28,143 +26,152 @@ struct ContentView: View {
     
     
     var body: some View {
+        
+        NavigationView{
+            
+            VStack{
                 
-                NavigationView{
+                Text("Bitte fügen Sie min. 2 Guesses ein")
+                    .foregroundStyle(Color.primary)
+                
+                HStack{
                     
-                    VStack{
+                    Button("Ein Guess Hinzufügen") {
+                        showingPopover = true
+                    }
+                    .foregroundColor(.white)
+                    .popover(isPresented: $showingPopover) {
                         
-                        Text("Bitte fügen Sie min. 2 Guesses ein")
-                            .foregroundStyle(Color.primary)
-                        
-                        HStack{
+                        VStack {
                             
-                            Button("Ein Guess Hinzufügen") {
-                                showingPopover = true
+                            Button("", systemImage: "chevron.compact.down") {
+                                showingPopover = false
                             }
-                            .foregroundColor(.white)
-                            .popover(isPresented: $showingPopover) {
-                                
-                                VStack {
-                                    
-                                    Button("", systemImage: "chevron.compact.down") {
-                                        showingPopover = false
-                                    }
-                                    .foregroundColor(.primary)
-                                    .padding()
-                                    .font(.largeTitle)
-                                    
-                                    Text("Für das Guessrad werden mind. 2 Namen benötigt")
-                                        .font(.headline)
-                                        .multilineTextAlignment(.center)
-                                        .padding()
-                                    
-                                    
-                                    TextField("Gib bitte dein Guess ein", text: $Guesses)
-                                        .submitLabel(.done)
-                                        .foregroundColor(skyBlue)
-                                        .multilineTextAlignment(.center)
-                                        .font(.title2)
-                                        .border(skyBlue)
-                                        .cornerRadius(8)
-                                        .padding()
-                                    
-                                    Button( action: {
-                                        if !Guesses.isEmpty {
-                                            RandomGuess.append(Guesses)
-                                            Guesses = ""
-                                        }
-                                    }) {
-                                        Text("Hinzufügen")
-                                            .padding()
-                                            .background(skyBlue)
-                                            .foregroundColor(.white)
-                                            .cornerRadius(10)
-                                    }
-                                    .padding()
-                                    
-                                    List{
-                                        ForEach(RandomGuess, id: \.self) { item in
-                                            Text(item)
-                                        }
-                                        .onDelete(perform: removeRows)
-                                    }
-                                    .padding()
-                                    .scrollContentBackground(.hidden)
-                                    .cornerRadius(15)
-                                }
-                            }
+                            .foregroundColor(.primary)
                             .padding()
-                            .background(skyBlue)
-                            .cornerRadius(10)
-                            
-                        }
-                        
-                        List {
-                            
-                            if RandomGuess.isEmpty {
-                                
-                                Text("Keine Eingaben vorhanden")
-                                
-                            }else {
-                                
-                                DisclosureGroup("Alle Eingaben") {
-                                    ForEach(RandomGuess, id: \.self) { item in
-                                        Text(item)
-                                        
-                                    }
-                                    .onDelete(perform: removeRows)
-                                }
-                                .padding()
-                            }
-                        }
-                        //.scrollContentBackground(.hidden)
-                        .cornerRadius(15)
-                        
-                        
-                        if RandomGuess.count >= 2 {
-                            
-                            WheelView(
-                                RandomGuess,
-                                id: \.self,
-                                label: { index in
-                                    Text (RandomGuess[index])
-                                        .font (.system(.caption, design: .rounded))
-                                        .foregroundColor (.white)
-                                    //.scaledToFit()
-                                }
-                            ) { item in
-                                print(item)
-                            }
-                            .padding()
-                            
-                            Image("fingerspin")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 70, height: 70)
-                            
-                            Text("Wischen Sie, um das Rad zu drehen")
-                                .font(.caption.bold())
-                            
-                        } else {
-                            hidden()
-                        }
-                        
-                        Text(random)
                             .font(.largeTitle)
-                        
+                            
+                            Text("Für das Guessrad werden mind. 2 Namen benötigt")
+                                .font(.headline)
+                                .multilineTextAlignment(.center)
+                                .padding()
+                            
+                            
+                            TextField("Gib bitte dein Guess ein", text: $Guesses)
+                                .submitLabel(.done)
+                                .foregroundColor(skyBlue)
+                                .multilineTextAlignment(.center)
+                                .font(.title2)
+                                .border(skyBlue)
+                                .cornerRadius(8)
+                                .padding()
+                            
+                            Button( action: {
+                                if !Guesses.isEmpty {
+                                    RandomGuess.append(Guesses)
+                                    Guesses = ""
+                                }
+                            }) {
+                                Text("Hinzufügen")
+                                    .padding()
+                                    .background(skyBlue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                            .padding()
+                            
+                            
+                            List{
+                                ForEach(RandomGuess, id: \.self) { item in
+                                    Text(item)
+                                }
+                                .onDelete(perform: removeRows)
+                                
+                            }
+                            .padding()
+                            .scrollContentBackground(.hidden)
+                            .cornerRadius(15)
+                        }
                     }
                     .padding()
-                    .navigationTitle("RandomGuess")
-                    .navigationBarTitleDisplayMode(.inline)
+                    .background(skyBlue)
+                    .cornerRadius(10)
+                    
+                }
+                
+                List {
+                    
+                    if RandomGuess.isEmpty {
+                        
+                        Text("Keine Eingaben vorhanden")
+                        
+                    }else {
+                        
+                        DisclosureGroup("Alle Eingaben") {
+                            ForEach(RandomGuess, id: \.self) { item in
+                                Text(item)
+                                
+                            }
+                            .onDelete(perform: removeRows)
+                        }
+                        .padding()
+                    }
+                }
+                .cornerRadius(15)
+                
+                if RandomGuess.count == 0 {
+                    
+                    
+                } else {
+                    
+                    //Ein Button zum Löschen der Elemente des Arrays
+                    Button("Alle Guesses löschen") {
+                        removeAllElements()
+                    }
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.red)
+                    .cornerRadius(10)
+                    
+                    WheelView(
+                        RandomGuess,
+                        id: \.self,
+                        label: { index in
+                            Text (RandomGuess[index])
+                                .font (.system(.caption, design: .rounded))
+                                .foregroundColor (.white)
+                            //.scaledToFit()
+                        }
+                    ) { item in
+                        print(item)
+                    }
+                    .padding()
+                    
+                    
+                    Image("fingerspin")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 70, height: 70)
+                    
+                    Text("Wischen Sie, um das Rad zu drehen")
+                        .font(.caption.bold())
                 }
             }
-    
-    func removeRows(at offsets: IndexSet) {
-        RandomGuess.remove(atOffsets: offsets)
+            .padding()
+            .navigationTitle("RandomGuess")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
     
+    func removeRows(at offsets: IndexSet) {
+        DispatchQueue.main.async {
+            RandomGuess.remove(atOffsets: offsets)
+        }
+    }
     func removeAllElements() {
-        RandomGuess.removeAll()
+        DispatchQueue.main.async {
+            RandomGuess.removeAll()
+        }
     }
 }
 

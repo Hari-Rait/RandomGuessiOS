@@ -46,7 +46,7 @@ struct RandomGenerator: View {
                             .padding()
                             .font(.largeTitle)
                             
-                            Text("Für das Guessrad werden mind. 2 Namen benötigt")
+                            Text("Für das Guessrad werden min. 2 Guesses benötigt")
                                 .font(.headline)
                                 .multilineTextAlignment(.center)
                                 .padding()
@@ -123,6 +123,15 @@ struct RandomGenerator: View {
                         .cornerRadius(10)
                 }
                 
+                //Ein Button zum Löschen der Elemente des Arrays
+                Button("Alle Guesses löschen") {
+                    removeAllElements()
+                }
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.red)
+                .cornerRadius(10)
+                
                 if !RandomGuess.isEmpty {
                     Text(random)
                         .font(.largeTitle)
@@ -136,6 +145,12 @@ struct RandomGenerator: View {
     
     func removeRows(at offsets: IndexSet) {
         RandomGuess.remove(atOffsets: offsets)
+    }
+    
+    func removeAllElements() {
+        DispatchQueue.main.async {
+            RandomGuess.removeAll()
+        }
     }
 }
 
