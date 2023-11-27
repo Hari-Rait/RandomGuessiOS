@@ -22,6 +22,9 @@ struct RandomGenerator: View {
     // Hellblaue farbe
     let skyBlue = Color(red: 0.4627, green: 0.8392, blue: 1.0)
     
+    // Bunte farbe
+   
+    
     var body: some View {
         NavigationView{
             
@@ -46,7 +49,7 @@ struct RandomGenerator: View {
                             .padding()
                             .font(.largeTitle)
                             
-                            Text("Für das Guessrad werden min. 2 Guesses benötigt")
+                            Text("Es werden min. 2 Guesses benötigt")
                                 .font(.headline)
                                 .multilineTextAlignment(.center)
                                 .padding()
@@ -118,9 +121,11 @@ struct RandomGenerator: View {
                 }) {
                     Text("Zufall generieren")
                         .padding()
-                        .background(Color.black)
+                        .background(LinearGradient(gradient: Gradient(colors: [.red, .blue, .green, .yellow, .orange, .indigo, .purple]), startPoint: .leading, endPoint: .trailing))
                         .foregroundColor(.white)
+                        .bold()
                         .cornerRadius(10)
+                       
                 }
                 
                 //Ein Button zum Löschen der Elemente des Arrays
