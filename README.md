@@ -26,8 +26,19 @@ The Random Output feature allows users to generate random results effortlessly a
 
 ### 1. Prototype in Figma 
 
+![Prototype in Figma](https://github.com/Hari-Rait/RandomGuessiOS/blob/main/RandomGuess%20Picture/Bildschirmfoto%202023-11-16%20um%2023.03.51.png)
+
 ### 2. Fortune Page + User input Page
 
+<img src="https://github.com/Hari-Rait/RandomGuessiOS/blob/main/RandomGuess%20Picture/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202023-11-27%20at%2018.43.15.png" width="450" height="700">
+<img src="https://github.com/Hari-Rait/RandomGuessiOS/blob/main/RandomGuess%20Picture/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202023-11-27%20at%2018.44.37.png" width="450" height="700">
+<img src="https://github.com/Hari-Rait/RandomGuessiOS/blob/main/RandomGuess%20Picture/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202023-11-27%20at%2018.44.13.png" width="450" height="700">
+
 ### 3. Random output Page + User input Page
+
+<img src="https://github.com/Hari-Rait/RandomGuessiOS/blob/main/RandomGuess%20Picture/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202023-11-27%20at%2018.44.23.png" width="450" height="700">
+<img src="https://github.com/Hari-Rait/RandomGuessiOS/blob/main/RandomGuess%20Picture/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202023-11-27%20at%2018.55.21.png" width="450" height="700">
+<img src="https://github.com/Hari-Rait/RandomGuessiOS/blob/main/RandomGuess%20Picture/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202023-11-27%20at%2018.44.45.png" width="450" height="700">
+<img src="https://github.com/Hari-Rait/RandomGuessiOS/blob/main/RandomGuess%20Picture/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202023-11-27%20at%2018.44.50.png" width="450" height="700">
 
 
